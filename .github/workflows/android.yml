@@ -13,8 +13,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Pull Buildozer image
-        run: docker pull kivy/buildozer
-
+        run: docker pull kivy/buildozer:stable
+  
       - name: Build APK (debug)
         run: |
           docker run --rm -v ${{ github.workspace }}:/home/user/hostcwd -w /home/user/hostcwd \
